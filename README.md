@@ -1,4 +1,4 @@
-We direct modify the implementation of original Reward Bench to evaluate the preference modeling ability of DPO and ToDO 
+We direct modify the implementation of original Reward Bench to evaluate the preference modeling ability of DPO and TODO 
 
 ## Quick Usage
 
@@ -13,7 +13,7 @@ For DPO evaluation
 CUDA_VISIBLE_DEVICES=0,1 python3 scripts/run_dpo.py ${policy_model_name_or_path} \
 --ref_model ${reference_model_name_or_path} \
 --dpo_beta 0.01 \
---evaluation_mode 0 \ #0 for DPO, 1 for ToDO
+--evaluation_mode 0 \ #0 for DPO, 1 for TODO
 --save_path_prefix  Results/reward_bench_results \ #save path
 --model_abbr ${set_model_abbr} \ # model abbreviation
 --batch_size 8
@@ -21,21 +21,21 @@ CUDA_VISIBLE_DEVICES=0,1 python3 scripts/run_dpo.py ${policy_model_name_or_path}
 CUDA_VISIBLE_DEVICES=0,1 python3 scripts/run_dpo.py ${policy_model_name_or_path} \
 --ref_model ${reference_model_name_or_path} \
 --dpo_beta 0.01 \
---evaluation_mode 0 \ #0 for DPO, 1 for ToDO
+--evaluation_mode 0 \ #0 for DPO, 1 for TODO
 --save_path_prefix  Results/reward_bench_results \ #save path
 --model_abbr ${set_model_abbr} \ # model abbreviation
 --batch_size 8 \
 --prior_datsets 
 ```
 
-For ToDO evaluation
+For TODO evaluation
 
 ```shell
 CUDA_VISIBLE_DEVICES=0,1 python3 scripts/run_dpo.py --model  ${policy_model_name_or_path} \
 --ref_model ${reference_model_name_or_path} \
 --dpo_theta -0.5 \
 --dpo_beta 0.01 \ 
---evaluation_mode 1 \ #0 for DPO, 1 for ToDO
+--evaluation_mode 1 \ #0 for DPO, 1 for TODO
 --save_path_prefix  Results/reward_bench_results/ \save path
 --model_abbr ${set_model_abbr} \ # model abbreviation
 --batch_size 8
@@ -45,7 +45,7 @@ CUDA_VISIBLE_DEVICES=0,1 python3 scripts/run_dpo.py --model  ${policy_model_name
 --ref_model ${reference_model_name_or_path} \
 --dpo_theta -0.5 \
 --dpo_beta 0.01 \ 
---evaluation_mode 1 \ #0 for DPO, 1 for ToDO
+--evaluation_mode 1 \ #0 for DPO, 1 for TODO
 --save_path_prefix  Results/reward_bench_results/ \save path
 --model_abbr ${set_model_abbr} \ # model abbreviation
 --batch_size 8 \
